@@ -1,0 +1,40 @@
+<?php 
+include 'pure_php.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHP Demo</title>
+</head>
+<body>
+    <h1>
+        <label>Username: </label>
+        <br>
+        <?php echo $username;?>
+        <br>
+        <label>User ID: </label>
+        <br>
+        <?php echo $user_id;?>
+        <br>
+        <label>Course and section: </label>
+        <br>
+        <?php echo $year_and_section;?>
+        <br>
+    </h1>
+
+    <button type="button" onclick="greetUser()">Greet User</button>
+
+    <script>
+
+        let username = "<?php echo $username?>";
+        let userID = "<?php echo $user_id?>";
+        let section = "<?php echo $year_and_section?>";
+        function greetUser(){
+            alert("Hello " + username + "!" + " Your user id is: " + userID + ", your course and section is " + section);
+        }
+    </script>
+</body>
+</html>
